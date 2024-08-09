@@ -1,5 +1,7 @@
 # Frontend Mentor - Social links profile
 
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/Newbie/social-links-profile-main/)
+
 ![Design preview for the Social links profile coding challenge](./preview.jpg)
 
 ## Welcome! 👋
