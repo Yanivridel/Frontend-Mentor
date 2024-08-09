@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --black: hsl(0, 0%, 8%);
+    --fw-normal: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4em;
+    font-weight: var(--fw-normal);
+    background-color: var(--black);
+    min-height: 100vh;  /* 120 */
+    display: grid;
+    place-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.container {
+    padding-inline: 15rem;
+    margin: 9rem auto 0;
+}
+
+.profile-container {
+    background-color: var(--dark-grey);
+    width: 32rem;
+    padding: 3rem;
+    border-radius: 0.8rem;
+    text-align: center;
+}
+
+.profile-img {
+    width: 9rem;
+    aspect-ratio: 1;
+    margin: 0 auto;
+}
+
+.profile-img #img {
+    display: inherit;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.profile-title {
+    margin-top: 3rem;
+}
+
+.profile-title h1 {
+    color: var(--white);
+    font-size: 2.3rem;
+    font-weight: var(--fw-bold); 
+}
+
+.profile-title h2 {
+    color: var(--green);
+    font-size: 1.4rem;
+    margin: 1rem auto 2.5rem;
+    font-weight: var(--fw-bold);
+}
+
+.profile-title p {
+    color: var(--white);
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.social-media li {
+    width: 100%;
+}
+
+.social-media li a {
+    background-color: var(--grey);
+    color: var(--white);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    margin-bottom: 1.3rem;
+    font-weight: var(--fw-semi-bold);
+    transition: all 0.3s ease-in-out;
+}
+
+.social-media li a:hover {
+    background-color: var(--green);
+    color: var(--black);
+}
+
+@media(min-width: 1200px){
+    .container{
+        margin-top: 0;
+    }
+    .profile-container {
+        width: 32rem;
+    }
+}
+
+.attribution { 
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 1.9rem;
+    color:rgb(240, 238, 243);
+}
+.attribution a {
+    font-size: 2rem;
+    color: hsl(152, 27%, 53%);
+}
