@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "Figtree", sans-serif;
+    src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal; /* Font weight (can be bold, light, etc.) */
+    font-style: normal;  /* Font style (can be italic, oblique, etc.) */
+}
+@font-face {
+    font-family: "Figtree", sans-serif;
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal;
+    font-style: italic;  
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-light: hsl(0, 0%, 42%);
+    --gray-dark: hsl(0, 0%, 7%);
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;
+    color: var(--gray-dark);
+    background-color: var(--yellow);
+    font-size: 1.4em;
+    min-height: 100vh; 
+    display: grid;
+    place-content: center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.card-container {
+    background-color: var(--white);
+    border: 1px solid black;
+    padding: 1.5rem;
+    width: 32rem;
+    /* margin: 9rem auto 0; */
+    border-radius: 1rem;
+    box-shadow: 7px 7px 0px rgb(0, 0, 0);
+}
+
+.card-header img {
+    border-radius: 1rem;
+    width:100%;
+}
+
+.card-header .card-categories{
+    background-color: var(--yellow);
+    font-weight: 800;
+    font-size: 1.2rem;
+    width: 25%;
+    padding: 0.6rem;
+    margin: 1rem 0 1rem;
+    border-radius: 0.5rem;
+}
+
+.card-description h1 a {
+    color: var(--gray-dark);
+    font-size: 1.9rem;
+    width: 80%;
+    margin: 1.2rem 0 1.2rem;
+}
+
+.card-description h1 a:hover {
+    color: var(--yellow);
+}
+
+.card-description p {
+    color: var(--gray-light);
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+}
+
+.card-footer img {
+    width: 8.5%;
+}
+
+.card-footer p {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-left: 1rem;
+}
+
+.attribution { 
+    display: grid;
+    place-content: center;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 1.9rem;
+    color:rgb(16, 15, 17);
+}
+.attribution a {
+    font-size: 2rem;
+    color: hsl(151, 37%, 42%);
+}
+
+
