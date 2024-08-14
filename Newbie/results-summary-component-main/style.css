@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "Hanken Grotesk", sans-serif;
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Hanken Grotesk", sans-serif;
+    src: url('./assets/fonts/static/HankenGrotesk-Medium.ttf') format('woff2');
+    font-weight: normal;
+    font-style: italic;  
+}
+@font-face {
+    font-family: "Hanken Grotesk", sans-serif;
+    src: url('./assets/fonts/static/HankenGrotesk-Bold.ttf') format('woff2');
+    font-weight: normal;
+    font-style: italic;  
+}
+@font-face {
+    font-family: "Hanken Grotesk", sans-serif;
+    src: url('./assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('woff2');
+    font-weight: normal;
+    font-style: italic;  
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-red: hsla(0, 100%, 67%, 0.06);
+    --orangey-yellow: hsla(39, 100%, 56%, 0.061);
+    --green-teal: hsla(166, 100%, 37%, 0.06);
+    --cobalt-blue: hsla(234, 85%, 45%, 0.1);
+
+    --light-slate-blue: hsl(252, 100%, 67%); /* BACKGROUND */
+    --light-royal-blue: hsl(241, 81%, 54%); /* BACKGROUND */
+
+    --violet-blue: hsla(256, 72%, 46%, 1); /* CIRCLE */
+    --persian-blue: hsla(241, 72%, 46%, 0); /* CIRCLE */
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 1.4em;
+    font-weight: 500;
+    min-height: 100vh; /* ??? */
+    display:grid;
+    place-content: center;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    /* gap: 10px; */
+    text-align: center;
+    border-radius: 4rem;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.result-container {
+    background: linear-gradient(to bottom,
+    var(--light-slate-blue) 20%, var(--light-royal-blue) 90%);
+    border-radius: 4rem;
+    padding: 5rem;
+}
+
+.result-container h1 {
+    color: var(--light-lavender);
+}
+
+.result-container .result-circle {
+    background: linear-gradient(to top,
+    var(--light-slate-blue) 20%, var(--light-royal-blue) 90%);
+    position: relative;
+    display: flex;
+    place-content: center;
+    border-radius: 50%;
+    height: 40%;
+    aspect-ratio: 1/1;
+    margin: 12% auto;
+}
+
+.result-circle .avg-score {
+    color: var(--white);
+    font-size: 8em;
+    position: absolute;
+    top: 15%;
+}
+
+.result-circle p {
+    color: var(--light-lavender);
+    position: absolute;
+    font-size: 9rem;
+    bottom: 15%;
+}
+
+.result-container h2 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.result-container p {
+    color: var(--light-lavender);
+    font-size: 2rem;
+}
+
+.summary-container {
+    padding: 2rem;
+}
+
+ul.categories {
+    list-style: none;
+}
+
+ul.categories li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid black; /* DELETE LATER */
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+li img {
+    margin-right: 1.5rem;
+}
+
+li.reaction {
+    background-color: var(--light-red);
+    color: hsl(0, 100%, 67%);
+}
+
+li.memory {
+    background-color: var(--orangey-yellow) ;
+    color: hsl(39, 100%, 56%);
+}
+
+li.verbal {
+    background-color: var(--green-teal) ;
+    color: hsl(166, 100%, 37%);
+    
+}
+
+li.visual {
+    background-color: var(--cobalt-blue) ;
+    color: hsl(234, 85%, 45%);
+
+}
+
+li p {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light-lavender);
+}
+
+li p.score {
+    margin-right: 15%;
+    color: var(--dark-gray-blue);
+    font-weight: 800;
+}
+
+.summary-container .continue-button {
+    margin: 2rem auto;
+    width: 85%;
+}
+
+.continue-button a {
+    border: 1px solid black;
+    background-color: var(--dark-gray-blue);
+    border-radius: 5rem;
+    padding: 2rem;
+    margin: 0 auto;
+    color: var(--white);
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.continue-button a:hover {
+    background: linear-gradient(to bottom, var(--light-slate-blue) , var(--light-royal-blue));
+}
+
+
+
+
+/* @media (min-width: 376px) {
+    .col-lg-4 {
+      width: calc(33.33% - 10px);
+      float: left;
+    }
+}
+@media (max-width: 375px) {
+    .col-sm-12 {
+      width: calc(100% - 10px);
+      float: left;
+    }
+} */
