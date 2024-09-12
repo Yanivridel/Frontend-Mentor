@@ -1,6 +1,6 @@
 # Frontend Mentor - Results summary component
 
-MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/results-summary-component-main/)
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/Newbie/results-summary-component-main/)
 
 ![Design preview for the Results summary component coding challenge](./design/desktop-preview.jpg)
 
