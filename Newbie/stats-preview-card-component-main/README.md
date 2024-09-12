@@ -1,5 +1,7 @@
 # Frontend Mentor - Stats preview card component
 
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/Newbie/stats-preview-card-component-main/)
+
 ![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
