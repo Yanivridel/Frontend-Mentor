@@ -76,7 +76,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     gap: 0.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
     color: var(--smokey-grey);
 }
 .input-container label {
@@ -88,17 +88,91 @@ body {
 .input-container input {
     display: block;
     width: 100%;
-    padding: 0.4rem;
+    padding: 0.3rem;
+    font-family: 'Poppins-ExtraBold';
+    font-size: 0.6rem;
     border: 1px solid var(--light-grey);
     border-radius: 0.25rem;
+    caret-color: var(--purple);
+    cursor: pointer;
 }
 .input-container input::placeholder {
     font-family: 'Poppins-ExtraBold';
     font-size: 0.6rem;
 }
 .input-container input:focus {
-    font-family: 'Poppins-ExtraBold';
-    width: 100%;
     border: 2px solid var(--purple);
-    /* font-size: 0.6rem; */
+    outline: none;
+}
+.input-container input::selection {
+    background-color: var(--off-white);
+    color: var(--purple);
+}
+.input-container p {
+    display: none;
+    font-family: 'Poppins-Italic';
+    font-size: 0.4rem;
+    margin-top: 0.2rem;
+    color: var(--light-red);
+}
+
+.main-container img {
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    padding: 0.4rem;
+    transition: transform 0.3s ease;
+    transform: translate(-50%,-50%);
+}
+.main-container img:hover {
+    transform: scale(1.05) translate(-50%,-50%);
+    ;
+}
+
+.output-container {
+    margin-top: 1rem;
+    line-height: 1.1;
+}
+.output-container p {
+    font-family: 'Poppins-ExtraBoldItalic';
+    font-size: 10vw;
+}
+.output-container p span {
+    color: var(--purple);
+}
+
+@media (min-width: 700px) {
+    .main-container {
+        padding-inline: 2rem;
+    }
+    .input-container {
+        width: 65%;
+    }
+    hr {
+        width: 80%;
+    }
+    .main-container img {
+        left: 80%;
+        width: 120px;
+        padding: 0.9rem;
+    }
+    .output-container p {
+        font-size: 2.5rem;
+    }
+}
+
+.attribution { 
+    display: grid;
+    place-content: center;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1.9rem;
+    color:rgb(0, 0, 0);
+}
+.attribution a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: hsl(152, 27%, 53%);
 }

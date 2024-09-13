@@ -221,3 +221,18 @@ li span {
         grid-template-columns: 1fr;
     }
 }
+
+
+.attribution { 
+    display: grid;
+    place-content: center;
+    font-size: 3.7rem;
+    text-align: center;
+    margin-top: 1.9rem;
+    color:rgb(0, 0, 0);
+}
+.attribution a {
+    text-decoration: none;
+    font-size: 4rem;
+    color: hsl(152, 27%, 53%);
+}

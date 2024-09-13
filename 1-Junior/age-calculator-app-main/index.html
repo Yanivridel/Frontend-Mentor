@@ -11,35 +11,38 @@
 </head>
 <body>
   <div class="flex-center">
-    <div class="main-container">
+    <main class="main-container">
       <div class="input-container">
         <div class="day-container">
           <label for="day-input" class="input-title">Day</label>
           <input type="text" id="day-input" placeholder="DD">
+          <p class="error-msg" id="error-day"></p>
         </div>
         <div class="month-container">
           <label for="month-input" class="input-title">Month</label>
           <input type="text" id="month-input" placeholder="MM">
+          <p class="error-msg" id="error-month"></p>
         </div>
         <div class="year-container">
           <label for="year-input" class="input-title">Year</label>
           <input type="text" id="year-input" placeholder="YYYY">
+          <p class="error-msg" id="error-year"></p>
         </div>
       </div>
-      <hr />
-      <!-- <img src="./assets/images/icon-arrow.svg" alt="arrow-button"/> -->
-      <img src="https://placehold.co/46x44"/>
+      <hr id="line-break"/>
+      <img id="arrow-img" onclick="handleDisplayAgeClick()" src="./assets/images/icon-arrow.svg" alt="arrow-button"/>
       <div class="output-container">
-        <p><span id="years">--</span>years</p>
-        <p><span id="months">--</span>months</p>
-        <p><span id="days">--</span>days</p>
+        <p><span id="years">- -</span> years</p>
+        <p><span id="months">- -</span> months</p>
+        <p><span id="days">- -</span> days</p>
       </div>
-    </div>
-  </div>
-  <script src="./main.js"></script>
-  <!-- <div class="attribution">
-    Challenge by: <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
-    Coded by: <a href="https://github.com/Yanivridel">Yaniv Ridel</a>
-  </div>  -->
+    </main>
+  
+    <script src="./main.js"></script>
+    <div class="attribution">
+      Challenge by: <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+      Coded by: <a href="https://github.com/Yanivridel">Yaniv Ridel</a>
+    </div> 
+</div>
 </body>
 </html>
