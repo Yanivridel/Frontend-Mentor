@@ -2,6 +2,9 @@
 
 ![Design preview for the Recipe page coding challenge](./preview.jpg)
 
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/Newbie/recipe-page-main/)
+
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
