@@ -124,9 +124,10 @@ body {
         border-top-left-radius: 0;
         border-bottom-right-radius: 15px;
         background-image: url('./images/image-header-desktop.jpg'); 
-        height: 400px;
-        width: auto;
-        flex-shrink: 0;
+        height: 100%;
+        width: 100%;
+        background-size: auto;
+        object-fit: cover;
     }
     .img-container .overlay {
         border-top-left-radius: 0;
