@@ -1,6 +1,6 @@
 # Frontend Mentor - Age calculator app
 
-MY SOLUTION LINK: [Click](https://yanivridel.github.io/1-Junior/age-calculator-app-main/)
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/1-Junior/age-calculator-app-main/)
 
 ![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
 
