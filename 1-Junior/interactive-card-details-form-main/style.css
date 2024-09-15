@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+    --linear-gradient: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --purple: hsl(278, 94%, 30%);
+    --light-blue: hsl(249, 99%, 64%);
+    --red: hsl(0, 100%, 66%);
+
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    font-size: 18px;
+}
+body {
+    height: 100%;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.page-container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.background-img {
+    position: absolute;
+    height: 240px;
+    width: 100%;
+    background-image: url('./images/bg-main-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1.5rem;
+    z-index: 3;
+    max-width: 650px;
+}
+
+.cards {
+    height: 300px;
+    position: relative;
+}
+.cards .back-card {
+    position: relative;
+    width: 260px;
+    height: 142px;
+    top: -40%;
+    left: 20%;
+    z-index: 10;
+    background-image: url('./images/bg-card-back.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.back-card .card-cvc {
+    position: absolute;
+    top: 43%;
+    left: 77%;
+    color: var(--light-grayish-violet);
+    font-size: 0.8rem;
+
+}
+
+.cards .front-card {
+    position: relative;
+    top: 38%;
+    left: 5%;
+    width: 260px;
+    height: 142px;
+    z-index: 100;
+    background-image: url('./images/bg-card-front.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    color: var(--light-grayish-violet);
+}
+.front-card #eye-icon {
+    position: absolute;
+    top: 12%;
+    right: 7%;
+    height: 25px;
+    width: 35px;
+    z-index: 1000;
+    background-image: url('./images/eye-icon-open.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.front-card .card-logo {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    height: 30px;
+}
+.front-card .card-number {
+    position: absolute;
+    top: 55%;
+    left: 6%;
+    letter-spacing: 1.5px;
+}
+.front-card .card-name {
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+.front-card .card-date {
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+.blur-overlay {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    display: none;
+    z-index: 1000;
+}
+#blur-number {
+    border-radius: 20px;
+    top: 54%;
+    left: 3%;
+    width: 240px;
+    height: 25px;
+}
+#blur-date {
+    border-radius: 20px;
+    bottom: 7%;
+    right: 4%;
+    width: 45px;
+    height: 20px;
+}
+#blur-cvc {
+    border-radius: 20px;
+    top: 42%;
+    right: 11%;
+    width: 40px;
+    height: 20px;
+}
+
+.input-container {
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    gap: 15px;
+    padding: 1rem;
+    font-weight: 700;
+
+    /* display: none; */
+}
+.input-container label {
+    display: block;
+    color: var(--very-dark-violet);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-block: 5px;
+} 
+.input-container input {
+    padding: 0.7rem 0.6rem;
+    width: 100%;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--light-grayish-violet);
+    caret-color: var(--dark-grayish-violet);
+    cursor: pointer;
+}
+.input-container input::placeholder {
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--light-grayish-violet);
+}
+.input-container input:focus {
+    border: 1px solid var(--purple);
+}
+.input-container input::selection {
+    background-color: var(--light-grayish-violet);
+    color: var(--purple);
+}
+.input-container .error-msg {
+    display: none;
+    color: var(--red);
+    margin-top: 5px;
+    font-size: 0.6rem;
+}
+
+.date-and-cvc {
+    display: flex;
+}
+
+.date-and-cvc .date {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+}
+.date label {
+    grid-column: span 2;
+
+}
+.date input {
+    width: 80%;
+}
+
+.button button {
+    height: 40px;
+    width: 100%;
+    margin-top: 0.6rem;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border-radius: 10px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.8rem;
+    transition: 0.5s ease;
+}
+.button button:hover {
+    transform: scale(1.05);
+}
+
+.thx-container {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s ease-in;
+    text-align: center;
+}
+.thx-container .continue-button {
+    align-self: normal;
+}
+
+.attribution { 
+    display: grid;
+    place-content: center;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0rem;
+    padding-bottom: 2rem;
+    color:rgb(0, 0, 0);
+}
+.attribution a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: hsl(152, 27%, 53%);
+}
+
+@media (min-width: 1100px) {
+    .page-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .background-img {
+        align-self: flex-start;
+        position: absolute;
+        height: 100%;
+        width: 35%;
+        left: 0;
+        background-image: url('./images/bg-main-desktop.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 17vw;
+        max-width: 1000px;
+    }
+    .cards .back-card {
+        width: 400px;
+        height: 220px;
+        top: -10%;
+        left: 20%;
+    }
+    .cards .front-card {
+        top: -20%;
+        left: -10%;
+        width: 400px;
+        height: 220px;
+    }
+    .front-card #eye-icon {
+        height: 35px;
+        width: 55px;
+    }
+
+    .back-card .card-cvc {
+        font-size: 1rem;
+    }
+    .front-card .card-logo {
+        height: 50px;
+    }
+    .front-card .card-number {
+        font-size: 1.5rem;
+    }
+    .front-card .card-name {
+        font-size: 1rem;
+    }
+    .front-card .card-date {
+        font-size:  1rem;
+    }
+    #blur-number {
+        width: 350px;
+        height: 40px;
+    }
+    #blur-date {
+        width: 60px;
+        height: 30px;
+    }
+    #blur-cvc {
+        width: 60px;
+        height: 27px;
+    }
+
+    .input-container {
+        min-width: 400px;
+        width: 400px;
+    }
+
+    .attribution {
+        margin-top: 1rem;
+    }
+}
+

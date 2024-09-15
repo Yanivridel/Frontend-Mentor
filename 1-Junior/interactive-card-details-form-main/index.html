@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-container">
+    <div class="background-img"></div>
+    <main class="main-container">
+      <div class="cards">
+        <div class="front-card">
+          <div onclick="toggleBlurEye()" id="eye-icon"></div>
+          <img class="card-logo" src="./images/card-logo.svg" alt="card logo"/>
+          <p id="card-number" class="card-number">0000 0000 0000 0000</p>
+          <p id="card-name" class="card-name">Jane Appleseed</p>
+          <p id="card-date" class="card-date">00/00</p>
+          <div class="blur-overlay" id="blur-number"></div>
+          <div class="blur-overlay" id="blur-date"></div>
+        </div>
+        <div class="back-card">
+          <p id="card-cvc" class="card-cvc">000</p>
+          <div class="blur-overlay" id="blur-cvc"></div>
+        </div>
+      </div>
+      <div id="input-container" class="input-container">
+        <div class="name-container">
+          <label for="name-input">Cardholder Name</label>
+          <input oninput="nameOnInput()" type="text" id="name-input" maxlength="17" placeholder="e.g. Jane Appleseed">
+          <p class="error-msg" id="error-name">Can't be blank</p>
+        </div>
+        <div class="number-container">
+          <label for="number-input">Card Number</label>
+          <input oninput="numberOnInput()" type="text" id="number-input" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+          <p class="error-msg" id="error-number">Wrong format, numbers only</p>
+        </div>
+        <div class="date-and-cvc">
+          <div class="date">
+            <label for="month-input">Exp. Date (MM/YY)</label>
+            <input oninput="monthOnInput()" type="text" id="month-input" maxlength="2" placeholder="MM"/>
+            <input oninput="yearOnInput()" type="text" id="year-input" maxlength="2" placeholder="YY">
+            <p class="error-msg" id="error-date">Can't be blank</p>
+          </div>
+          <div class="cvc">
+            <label for="cvc-input">CVC</label>
+            <input oninput="cvcOnInput()" type="text" id="cvc-input" maxlength="3" placeholder="e.g. 123">
+            <p class="error-msg" id="error-cvc">Can't be blank</p>
+          </div>
+        </div>
+        <div class="confirm-button button">
+          <button onclick="handleConfirmButtonClick()">Confirm</button>
+        </div>
+      </div>
+      <div id="thx-container" class="thx-container">
+        <img src="./images/icon-complete.svg" />
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <div class="continue-button button">
+          <button>Continue</button>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by: <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+      Coded by: <a href="https://github.com/Yanivridel" target="_blank">Yaniv Ridel</a>
+    </div> 
+  </main>
+  
+
+  <script src="main.js"></script>
+</body>
+</html>
