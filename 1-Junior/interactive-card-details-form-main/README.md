@@ -1,5 +1,7 @@
 # Frontend Mentor - Interactive card details form
 
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/1-Junior/interactive-card-details-form-main/)
+
 ![Design preview for the Interactive card details form coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
