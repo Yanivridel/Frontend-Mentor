@@ -1,5 +1,7 @@
 # Frontend Mentor - Testimonials grid section
 
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/1-Junior/testimonials-grid-section-main/)
+
 ![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
