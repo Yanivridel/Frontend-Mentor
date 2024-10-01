@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+
+</head>
+<body>
+  <main class="flex-center">
+    <div id="card">
+      <div class="card-head">
+        <p>My balance</p>
+        <h2>$921.48</h2>
+        <img src="./images/logo.svg"/>
+      </div>
+      <div class="card-main-content">
+        <div class="card-body">
+          <h3>Spending - Last 7 days</h3>
+          <div class="card-bar-chart">
+            <div class="mon day">
+              <div class="flex">
+                <div class="pop-up-data"></div>
+                <div id="mon-bar" class="bar"></div>
+              </div>
+              <p class="mon-text">mon</p>
+            </div>
+            <div class="tue day">
+              <div class="flex">
+                <div class="pop-up-data"></div>
+                <div id="tue-bar" class="bar"></div>
+              </div>
+                <p class="tue-text">tue</p>
+            </div>
+            <div class="wed day">
+              <div class="flex">
+                <div class="pop-up-data"></div>
+                <div id="wed-bar" class="bar"></div>
+              </div>
+                <p class="wed-text">wed</p>
+            </div>
+            <div class="thu day">
+              <div class="flex">
+                <div class="pop-up-data"></div>
+                <div id="thu-bar" class="bar"></div>
+              </div>
+                <p class="thu-text">thu</p>
+            </div>
+            <div class="fri day">
+              <div class="flex">
+                <div class="pop-up-data"></div>
+                <div id="fri-bar" class="bar"></div>
+              </div>
+                <p class="fri-text">fri</p>
+            </div>
+            <div class="sat day">
+              <div class="flex">
+                <div class="pop-up-data"></div>
+                <div id="sat-bar" class="bar"></div>
+              </div>
+                <p class="sat-text">sat</p>
+            </div>
+            <div class="sun day">
+              <div class="flex">
+                <div class="pop-up-data"></div>
+                <div id="sun-bar" class="bar"></div>
+              </div>
+                <p class="sun-text">sun</p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="card-foot">
+          <div class="total-container">
+            <p>Total this month</p>
+            <h1>$478.33</h1>
+          </div>
+          <div class="percentage-container">
+            <h3>+2.4%</h3>
+            <p>from last month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
