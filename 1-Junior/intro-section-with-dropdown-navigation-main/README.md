@@ -1,5 +1,7 @@
 # Frontend Mentor - Intro section with dropdown navigation
 
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/1-Junior/intro-section-with-dropdown-navigation-main/)
+
 ![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
