@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+      <div class="overlay" id="overlay"></div>
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="nav-logo-menu-bar">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="main logo" />
+          </div>
+          <div class="menu-bar" onclick="">
+            <img src="./images/icon-menu.svg" alt="icon menu"/>
+          </div>
+        </div>
+        <!--** Hidden Mobile **-->
+        <div class="nav-menu" id="nav-menu">
+          <div class="close-menu-icon" onclick="">
+            <img src="./images/icon-close-menu.svg" alt="close icon menu" />
+          </div>
+          <!-- Nav Items -->
+          <div class="nav-menu-item-container">
+            <!-- Features -->
+            <div class="relative">
+              <div class="features list-nav-item nav-item" tabindex="1">
+                <p>Features</p>
+                <div class="arrow-img"></div>
+              </div>
+              <div class="hover-zone"></div>
+              <div class="features-expanded-list expanded-list" id="features-expanded-list">
+                <div class="features-item-container">
+                  <img
+                    src="images/icon-todo.svg"
+                    alt="icon to do"
+                    class="features-item-icon"
+                  />
+                  <p class="features-item">Todo List</p>
+                </div>
+                <div class="features-item-container">
+                  <img
+                    src="images/icon-calendar.svg"
+                    alt="icon calendar"
+                    class="features-item-icon"
+                  />
+                  <p class="features-item">Calendar</p>
+                </div>
+                <div class="features-item-container">
+                  <img
+                    src="images/icon-reminders.svg"
+                    alt=""
+                    class="features-item-icon"
+                  />
+                  <p class="features-item">Reminders</p>
+                </div>
+                <div class="features-item-container">
+                  <img
+                    src="images/icon-planning.svg"
+                    alt=""
+                    class="features-item-icon"
+                  />
+                  <p class="features-item">Planning</p>
+                </div>
+              </div>
+            </div>
+            <!-- Company -->
+            <div class="relative">
+              <div class="company list-nav-item nav-item" tabindex="2">
+                  <p>Company</p>
+                  <div class="arrow-img"></div>
+              </div>
+              <div class="hover-zone"></div>
+              <div class="company-expanded-list expanded-list" id="company-expanded-list">
+                <p class="company-item">History</p>
+                <p class="company-item">Our&nbsp;Team</p>
+                <p class="company-item">Blog</p>
+              </div>
+            </div>
+            <!-- Career -->
+            <div class="nav-item" tabindex="3">
+              <p>Careers</p>
+            </div>
+            <!-- About -->
+            <div class="nav-item" tabindex="4">
+              <p>About</p>
+            </div>
+          </div>
+          <!-- Login and Register -->
+          <div class="login-register-container">
+            <button class="login-btn">Login</button>
+            <button class="register-btn">Register</button>
+          </div>
+        </div>
+        <!--** End Hidden Mobile **-->
+      </nav>
+      <div class="grid-container">
+        <!-- Illustration -->
+        <div class="illustration"></div>
+
+        <div class="left-container">
+          <!-- Main content -->
+          <div class="main-content">
+            <h1 class="main-heading"><span>Make</span> remote&nbsp;work</h1>
+            <p class="description">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button class="learn-more-btn">Learn more</button>
+          </div>
+
+          <!-- Clients -->
+          <div class="client-section">
+            <img src="images/client-databiz.svg" alt="" class="databiz-logo" />
+            <img
+              src="images/client-audiophile.svg"
+              alt=""
+              class="audiophile-logo"
+            />
+            <img src="images/client-meet.svg" alt="" class="meet-logo" />
+            <img src="images/client-maker.svg" alt="" class="maker-logo" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        . Coded by <a href="https://github.com/Yanivridel" target="_blank">Yaniv Ridel</a>.
+      </div>
+    </footer>
+  <script src="main.js"></script>
+</body>
+</html>
