@@ -1,5 +1,7 @@
 # Frontend Mentor - Expenses chart component
 
+MY SOLUTION LINK: [Click](https://yanivridel.github.io/Frontend-Mentor/1-Junior/expenses-chart-component-main/)
+
 ![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
