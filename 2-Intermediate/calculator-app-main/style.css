@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --radius: 7px;
+}
+
+[data-theme="light"] {
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+
+    --key-background: hsl(45, 7%, 89%);
+    --key-shadow: hsl(35, 11%, 61%);
+    --key-hover: #ffffff;
+    --toggle-equal-background: hsl(25, 98%, 40%);
+    --toggle-equal-shadow: hsl(25, 99%, 27%);
+    --toggle-equal-hover: #ff8b38;
+    --del-reset-background: hsl(185, 42%, 37%);
+    --del-reset-shadow: hsl(185, 58%, 25%);
+    --del-reset-hover: #62b5bd;
+
+    --text1: hsl(60, 10%, 19%);
+    --header-screen-text: hsl(60, 10%, 19%);
+    --white-text: hsl(0, 0%, 100%);
+}
+
+[data-theme="dark"] {
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+
+    --key-background: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --key-hover: #ffffff;
+    --toggle-equal-background: hsl(6, 63%, 50%);
+    --toggle-equal-shadow: hsl(6, 70%, 34%);
+    --toggle-equal-hover: #f96c5b;
+    --del-reset-background: hsl(225, 21%, 49%);
+    --del-reset-shadow: hsl(224, 28%, 35%);
+    --del-reset-hover: #a2b3e1;
+
+    --text1: hsl(221, 14%, 31%);
+    --white-text: hsl(0, 0%, 100%);
+}
+
+[data-theme="purple"] {
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+
+    --key-background: hsl(268, 47%, 21%);
+    --key-shadow: hsl(290, 70%, 36%);
+    --key-hover: #6b34ac;
+    --toggle-equal-background: hsl(176, 100%, 44%);
+    --toggle-equal-shadow: hsl(177, 92%, 70%);
+    --toggle-equal-hover: #94fff9;
+    --del-reset-background: hsl(281, 89%, 26%);
+    --del-reset-shadow: hsl(285, 91%, 52%);
+    --del-reset-hover: #8631b0;
+
+    --text1: hsl(52, 100%, 62%);
+    --header-screen-text: hsl(52, 100%, 62%);
+    --text2: hsl(198, 20%, 13%);
+    --white-text: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    font-size: 32px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+}
+main.flex-center {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background);
+    color: var(--text1);
+    padding: 0.6rem;
+}
+.calc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+/* HEADER */
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0.2rem;
+    color: var(--header-screen-text ,var(--white-text));
+}
+.calc-logo {
+    font-size: 0.6rem;
+}
+.theme-container {
+    display: flex;
+    gap: 0.8rem;
+}
+.theme-container p {
+    font-size: 0.4rem;
+    font-weight: 700;
+    align-self: flex-end;
+}
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.toggle-numbers {
+    display: flex;
+    justify-content: space-around;
+    width: 65px;
+}
+.toggle-background {
+    background-color: var(--toggle-background);
+    height: 25px;
+    border-radius: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.click-placeholder {
+    cursor: pointer;
+    border-radius: 15px;
+    /* background-color: red; */
+}
+.toggle {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background-color: var(--toggle-equal-background);
+    width: 25%;
+    height: 65%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+    transform: translate(-50%,-50%);
+}
+.toggle:hover {
+    background-color: var(--toggle-equal-hover);
+}
+.toggle.one {
+    left: 20%;
+}
+.toggle.two {
+    left: 45%;
+}
+.toggle.three {
+    left: 80%;
+}
+/* SCREEN */
+.calc-screen {
+    background-color: var(--screen-background);
+    border-radius: var(--radius);
+    padding: 0.8rem 0.8rem 0.5rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    max-width: 334px;
+}
+.calc-screen::-webkit-scrollbar {
+    height: 5px;
+}
+.calc-screen::-webkit-scrollbar-thumb {
+    background-color: var(--del-reset-background); 
+    border-radius: 10px;
+}
+.calc-screen::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+#calc-result {
+    font-size: 1.4rem;
+    color: var(--header-screen-text , var(--white-text));
+    text-align: right;
+}
+#calc-result::selection {
+    color: var(--del-reset-background);
+    background-color: var(--key-background);
+}
+/* BODY */
+.calc-body {
+    background-color: var(--toggle-background);
+    border-radius: var(--radius);
+    padding: 0.6rem;
+    display: grid;
+    grid-template: repeat(5, 65px) / repeat(4, 1fr);
+    gap: 13px;
+}
+.key {
+    background-color: var(--key-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--key-shadow);
+    border-radius: var(--radius) ;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: inset 0px -4px 0px var(--key-shadow);
+}
+.key:hover {
+    background-color: var(--key-hover);
+}
+#del-button, #reset-button{
+    font-size: 0.7rem;
+    background-color: var(--del-reset-background);
+    box-shadow: inset 0px -4px 0px var(--del-reset-shadow);
+    color: var(--white-text);
+}
+#del-button:hover, #reset-button:hover {
+    background-color: var(--del-reset-hover);
+}
+#reset-button {
+    grid-column: span 2;
+}
+#equal-button {
+    grid-column: span 2;
+    font-size: 0.7rem;
+    background-color: var(--toggle-equal-background);
+    color: var(--text2, var(--white-text));
+    box-shadow: inset 0px -4px 0px var(--toggle-equal-shadow);
+}
+#equal-button:hover {
+    background-color: var(--toggle-equal-hover);
+}
+
+@media screen and (min-width: 600px) {
+    .calc-screen {
+        height: 100px;
+        max-width: 500px;
+    }
+    #calc-result {
+        font-size: 1.7rem;
+    }
+    .calc-body {
+        grid-template-columns: repeat(4, 100px);
+        gap:20px
+    }
+}
