@@ -167,7 +167,7 @@ function handleMainContentClick(e) {
                 handleTextDone();
             }
         });
-        commentText.addEventListener("blur", handleTextDone());
+        commentText.addEventListener("blur", handleTextDone);
         function handleTextDone() {
             commentText.setAttribute("contentEditable", false);
                 let text = commentText.textContent.trim();
