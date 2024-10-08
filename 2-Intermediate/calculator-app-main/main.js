@@ -11,7 +11,7 @@ buttonClickSound.load();
 let firstNumber, secondNumber, symbol, res,
     isDot, isFirstActive, isSymbolChange, isLastEqual;
 resetAll();
-
+_toggle.classList.add(currTheme === "dark" ? "one" : currTheme === "light" ? "two" : "three");
 _main.setAttribute('data-theme', currTheme);
 
 _toggleBackground.addEventListener("click", (e) => handleThemeSwitch(e));

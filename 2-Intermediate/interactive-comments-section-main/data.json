@@ -40,6 +40,7 @@
           "createdAt": "1 week ago",
           "score": 4,
           "replyingTo": "maxblagun",
+          "replies": [],
           "user": {
             "image": { 
               "png": "./images/avatars/image-ramsesmiron.png",
@@ -54,6 +55,7 @@
           "createdAt": "2 days ago",
           "score": 2,
           "replyingTo": "ramsesmiron",
+          "replies": [],
           "user": {
             "image": { 
               "png": "./images/avatars/image-juliusomo.png",
